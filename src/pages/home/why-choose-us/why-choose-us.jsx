@@ -89,7 +89,7 @@ const WhyChooseUsSection = () => {
   return (
     <div
       ref={sectionRef}
-      className="my-20 relative h-[860px] bg-black overflow-hidden"
+      className="my-20 relative h-screen bg-black overflow-hidden"
     >
       <div className="">
         <img
