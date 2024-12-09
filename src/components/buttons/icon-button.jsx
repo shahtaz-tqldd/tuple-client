@@ -58,7 +58,7 @@ const IconButton = React.forwardRef(({ className, icon: Icon, ...props }, ref) =
       className={`h-10 w-10 rounded-full center border border-white/30 origin-center ${className}`}
       {...props}
     >
-      <Icon className="h-4 text-white" />
+      <Icon className="h-4" />
     </button>
   );
 });

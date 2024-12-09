@@ -25,7 +25,7 @@ const WhyChooseUsSection = () => {
           ease: "power3.out",
           scrollTrigger: {
             trigger: sectionRef.current,
-            start: "top 320px",
+            start: "top 80%",
             toggleActions: "play none none none",
           },
         }
@@ -42,7 +42,7 @@ const WhyChooseUsSection = () => {
           ease: "power3.out",
           scrollTrigger: {
             trigger: sectionRef.current,
-            start: "top 75%",
+            start: "top 70%",
             toggleActions: "play none none none",
           },
         }
@@ -58,7 +58,7 @@ const WhyChooseUsSection = () => {
           ease: "power3.out",
           scrollTrigger: {
             trigger: sectionRef.current,
-            start: "top 70%",
+            start: "top 60%",
             toggleActions: "play none none none",
           },
         }
@@ -76,62 +76,55 @@ const WhyChooseUsSection = () => {
           ease: "power3.out",
           scrollTrigger: {
             trigger: sectionRef.current,
-            start: "top 65%",
+            start: "top 50%",
             toggleActions: "play none none none",
           },
         }
       );
     }, sectionRef);
 
-    return () => ctx.revert(); // Cleanup animations
+    return () => ctx.revert();
   }, []);
 
   return (
     <div
       ref={sectionRef}
-      className="my-20 relative h-screen bg-black overflow-hidden"
+      className="my-20 relative min-h-screen bg-black overflow-hidden"
     >
       <div className="">
         <img
           ref={imageRef}
           src={FEATURE_IMG}
           alt="explaining why should you choose us"
-          className="absolute h-full w-[65%] z-0 object-cover"
+          className="absolute h-full lg:w-[65%] w-full z-0 object-cover"
         />
-        <div className="bg-gradient-to-l from-black to-transparent absolute h-full w-[40%] right-[35%] z-[1]"></div>
+        <div className="lg:bg-gradient-to-l lg:bg-transparent bg-black/50 lg:from-black lg:to-transparent absolute h-full lg:w-[40%] w-full lg:right-[35%] right-0 z-[1]"></div>
       </div>
-      <div className="content flex gap-20 relative z-10 items-center h-full">
-        <div className="flex-1"></div>
-        <div className="lg:w-[55%]">
-          <h2
-            ref={headingRef}
-            className="text-6xl text-white/80"
-          >
-            What set us{" "}
-            <span className="text-white font-semibold">Apart</span>
+      <div className="content flex lg:gap-20 relative z-10 items-center h-full py-12">
+        <div className="lg:flex-1"></div>
+        <div className="lg:w-[55%] w-full">
+          <h2 ref={headingRef} className="text-white/80 lg:text-5xl text-3xl">
+            What sets us <span className="text-white font-semibold">Apart</span>
           </h2>
-          <p
-            ref={paragraphRef}
-            className="text-white/80 mt-4 mb-20 text-xl"
-          >
+          <p ref={paragraphRef} className="text-white/80 mt-4 lg:mb-20 mb-12 lg:text-lg">
             With years of experience in the property market, we specialize in
             connecting buyers, sellers, and renters with their ideal homes and
             investments.
           </p>
-          <div className="grid grid-cols-2 gap-x-8 gap-y-16">
+          <div className="grid lg:grid-cols-2 grid-cols-1 lg:gap-x-8 lg:gap-y-16 gap-y-6">
             {features.map((feature, index) => (
               <div
                 key={index}
                 className="feature-item"
                 ref={(el) => (featuresRef.current[index] = el)}
               >
-                <div className="icon relative mb-4 h-14 w-14">
+                <div className="icon relative mb-4 lg:h-14 lg:w-14">
                   <feature.icon
                     strokeWidth={1}
-                    className="h-12 w-12 text-green-300 relative z-10"
+                    className="lg:h-12 h-8 lg:w-12 w-8 text-green-300 relative z-10"
                   />
                 </div>
-                <h3 className="text-2xl font-semibold mb-2 text-white">
+                <h3 className="lg:text-2xl text-xl font-semibold mb-2 text-white">
                   {feature.title}
                 </h3>
                 <p className="text-white/70">{feature.description}</p>

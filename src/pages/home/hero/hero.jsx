@@ -1,6 +1,12 @@
 import React, { useRef, useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Bath, Bed, ChevronRight, SquareDashed } from "lucide-react";
+import {
+  Bath,
+  Bed,
+  ChevronRight,
+  CircleUser,
+  SquareDashed,
+} from "lucide-react";
 import gsap from "gsap";
 import { HERO_IMAGE, properties } from "./data";
 
@@ -147,81 +153,99 @@ const HeroSection = () => {
     >
       <div className="content py-8">
         <div>
-          <div className="text-7xl max-w-[800px] leading-[80px] text-black/90">
+          <div className="lg:text-7xl md:text-4xl text-3xl max-w-[800px] lg:leading-[80px] text-black/60 font-medium">
             <h1 ref={(el) => (headingRefs.current[0] = el)}>Find the Most</h1>
             <h1
               ref={(el) => (headingRefs.current[1] = el)}
-              className="font-semibold text-black"
+              className="text-primary"
             >
               Appropiate Residence
             </h1>
-            <h1 ref={(el) => (headingRefs.current[2] = el)}>For your Needs</h1>
+            <h1 ref={(el) => (headingRefs.current[2] = el)}>
+              For your <span className="text-white">Needs</span>
+            </h1>
           </div>
         </div>
-
-        <Button ref={buttonRef} className="mt-20">
-          Find Property
-          <ChevronRight className="ml-1.5 mt-0.5 -mr-2 h-5 w-5" />
-        </Button>
-
-        <div className="flex gap-4 mt-12 max-w-[500px]">
-          <div ref={propertyListRef}>
-            <div className="flex flex-col gap-2">
-              {properties?.map((property, index) => (
-                <div key={index} onClick={() => handlePropertySelect(property)}>
-                  <img
-                    ref={(el) => (propertyImagesRefs.current[index] = el)}
-                    src={property.image}
-                    alt={property.name}
-                    className={`h-20 w-20 object-cover rounded-xl border border-[3px] cursor-pointer ${
-                      selectedProperty.name === property.name
-                        ? "border-primary"
-                        : "border-transparent"
-                    }`}
-                  />
-                </div>
-              ))}
+        <div className="mt-20 fl gap-2">
+          <Button ref={buttonRef} >
+            Find Property
+            <ChevronRight className="ml-1.5 mt-0.5 -mr-2 h-5 w-5" />
+          </Button>
+          <Button className="lg:hidden flex bg-white text-primary py-4 pl-5 pr-6 rounded-full fl gap-2">
+            <CircleUser className="h-4 w-4" />
+            <h2>Hire an Agent</h2>
+          </Button>
+        </div>
+        <div className="flex justify-between items-end">
+          <div className="flex lg:flex-row flex-col gap-4 mt-12 max-w-[500px]">
+            <div ref={propertyListRef}>
+              <div className="flex lg:flex-col flex-row gap-2">
+                {properties?.map((property, index) => (
+                  <div
+                    key={index}
+                    onClick={() => handlePropertySelect(property)}
+                  >
+                    <img
+                      ref={(el) => (propertyImagesRefs.current[index] = el)}
+                      src={property.image}
+                      alt={property.name}
+                      className={`h-20 w-20 object-cover rounded-xl border border-[3px] cursor-pointer ${
+                        selectedProperty.name === property.name
+                          ? "border-primary"
+                          : "border-transparent"
+                      }`}
+                    />
+                  </div>
+                ))}
+              </div>
             </div>
-          </div>
-          <div className="flex-1">
-            <div ref={propertyDetailRef} className="bg-white/50 backdrop-blur-lg rounded-2xl p-5">
-              <h2 ref={propertyNameRef} className="text-xl">
-                {selectedProperty?.name}
-              </h2>
-              <p ref={propertyAddressRef} className="text-sm text-black/40">
-                {selectedProperty?.address}
-              </p>
-              <p
-                ref={propertyPriceRef}
-                className="mt-5 text-xl text-primary font-bold"
+            <div className="flex-1">
+              <div
+                ref={propertyDetailRef}
+                className="bg-white/50 backdrop-blur-lg rounded-2xl p-5"
               >
-                ${selectedProperty?.price}
-              </p>
-              <div className="mt-3 flex gap-5">
-                <div
-                  ref={(el) => (propertyDetailsRefs.current[0] = el)}
-                  className="fl gap-2 text-sm text-black/50"
+                <h2 ref={propertyNameRef} className="text-xl">
+                  {selectedProperty?.name}
+                </h2>
+                <p ref={propertyAddressRef} className="text-sm text-black/40">
+                  {selectedProperty?.address}
+                </p>
+                <p
+                  ref={propertyPriceRef}
+                  className="mt-5 text-xl text-primary font-bold"
                 >
-                  <Bed className="h-4 w-4" />
-                  <span>{selectedProperty?.beds} bedrooms</span>
-                </div>
-                <div
-                  ref={(el) => (propertyDetailsRefs.current[1] = el)}
-                  className="fl gap-2 text-sm text-black/50"
-                >
-                  <Bath className="h-4 w-4" />
-                  <span>{selectedProperty?.bath} baths</span>
-                </div>
-                <div
-                  ref={(el) => (propertyDetailsRefs.current[2] = el)}
-                  className="fl gap-2 text-sm text-black/50"
-                >
-                  <SquareDashed className="h-4 w-4" />
-                  <span>{selectedProperty?.area} sq. ft</span>
+                  ${selectedProperty?.price}
+                </p>
+                <div className="mt-3 flex gap-5">
+                  <div
+                    ref={(el) => (propertyDetailsRefs.current[0] = el)}
+                    className="fl gap-2 text-sm text-black/50"
+                  >
+                    <Bed className="h-4 w-4" />
+                    <span>{selectedProperty?.beds} bedrooms</span>
+                  </div>
+                  <div
+                    ref={(el) => (propertyDetailsRefs.current[1] = el)}
+                    className="fl gap-2 text-sm text-black/50"
+                  >
+                    <Bath className="h-4 w-4" />
+                    <span>{selectedProperty?.bath} baths</span>
+                  </div>
+                  <div
+                    ref={(el) => (propertyDetailsRefs.current[2] = el)}
+                    className="fl gap-2 text-sm text-black/50"
+                  >
+                    <SquareDashed className="h-4 w-4" />
+                    <span>{selectedProperty?.area} sq. ft</span>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
+          <Button className="lg:flex hidden bg-white text-primary py-4 pl-5 pr-6 rounded-full fl gap-2">
+            <CircleUser className="h-4 w-4" />
+            <h2>Hire an Agent</h2>
+          </Button>
         </div>
       </div>
     </div>

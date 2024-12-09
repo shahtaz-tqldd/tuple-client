@@ -32,8 +32,8 @@ const PropertiesSection = () => {
   return (
     <section className="py-20 properties-section">
       <div className="content">
-        <div className="flex justify-between">
-          <h2 className="text-5xl">Featured Properties</h2>
+        <div className="flex justify-between lg:flex-row flex-col gap-4">
+          <h2 className="lg:text-5xl text-3xl lg:font-normal font-bold">Featured Properties</h2>
           <p className="max-w-[760px] text-black/50">
             Ensuring every client receives unparalleled guidance through every
             step of the process. Whether you’re searching for your first home, a
@@ -42,7 +42,7 @@ const PropertiesSection = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-3 gap-8 mt-16">
+        <div className="grid lg:grid-cols-3 grid-cols-1 lg:gap-8 gap-6 lg:mt-16 mt-12">
           {properties?.map((property, index) => (
             <PropertyCard
               key={index}

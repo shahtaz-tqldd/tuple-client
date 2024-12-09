@@ -1,10 +1,5 @@
 export const footerNavLinks = [
   {
-    id: 1,
-    title: "Home",
-    link: "/",
-  },
-  {
     id: 2,
     title: "Propery",
     link: "/properties",
@@ -30,4 +25,3 @@ export const footerNavLinks = [
     link: "/contact-us",
   },
 ];
-

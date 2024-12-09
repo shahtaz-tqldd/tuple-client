@@ -20,7 +20,7 @@ const AboutUsSection = () => {
       defaults: { ease: "power2.out" },
       scrollTrigger: {
         trigger: sectionRef.current,
-        start: "top 299px",
+        start: "top 400px",
         end: "bottom 20%",
         toggleActions: "play none none none",
       },
@@ -52,7 +52,7 @@ const AboutUsSection = () => {
   }, []);
 
   return (
-    <div ref={sectionRef} className="content py-20 relative">
+    <div ref={sectionRef} className="content lg:py-20 py-12 relative">
       <img
         src={blue1}
         alt=""
@@ -69,13 +69,13 @@ const AboutUsSection = () => {
         </h4>
         <h2
           ref={(el) => (aboutTitleRefs.current[0] = el)}
-          className="mt-6 text-6xl text-center text-black/80"
+          className="mt-6 lg:text-5xl text-3xl lg:font-normal font-bold text-center text-black/80"
         >
           Discover the <span className="font-semibold text-black">Difference</span> with us
         </h2>
         <h2
           ref={(el) => (aboutTitleRefs.current[1] = el)}
-          className="mt-6 text-[28px] text-center text-black/30"
+          className="mt-6 lg:text-xl text-sm text-center text-black/30"
         >
           Every property has a <span className="text-primary">story,</span> and
           every client<span className="text-primary"> matters.</span>

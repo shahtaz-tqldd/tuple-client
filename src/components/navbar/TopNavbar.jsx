@@ -60,16 +60,20 @@ const TopNavbar = () => {
     <nav className="absolute left-0 right-0 z-20">
       <div className="flbx py-5 content">
         <div className="fl gap-20">
-          <Link ref={logoRef} className="text-2xl text-primary uppercase font-oxan">
-            Tuple <span className="font-black">Spot</span>
+          <Link
+            ref={logoRef}
+            className="text-2xl text-primary uppercase font-oxan"
+          >
+            Tuple <span className="font-bold">Spot</span>
           </Link>
 
-          <div className="fl gap-10">
+          <div className="fl gap-10 lg:flex hidden">
             {navLinks?.map(({ title, link }, index) => (
               <Link
                 ref={(el) => (navLinksRef.current[index] = el)}
                 key={index}
                 to={link}
+                className="text-black/60"
               >
                 {title}
               </Link>
@@ -81,11 +85,13 @@ const TopNavbar = () => {
             ref={(el) => (actionButtonsRef.current[0] = el)}
             onClick={handleSearchShow}
             icon={Search}
+            className="bg-white/40 backdrop-blur-sm text-white"
           />
           <IconButton
             ref={(el) => (actionButtonsRef.current[1] = el)}
             onClick={handleSearchShow}
             icon={User}
+            className="bg-white/40 backdrop-blur-sm text-white"
           />
         </div>
       </div>

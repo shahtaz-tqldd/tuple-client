@@ -31,8 +31,8 @@ const BlogsSection = () => {
   return (
     <section className="py-20 blog-section">
       <div className="content">
-        <div className="flex justify-between">
-          <h2 className="text-5xl">Read Blogs</h2>
+        <div className="flex justify-between lg:flex-row flex-col gap-4">
+          <h2 className="lg:text-5xl text-3xl lg:font-normal font-bold">Read Blogs</h2>
           <p className="max-w-[760px] text-black/50">
             At Tuple, we pride ourselves on integrity, innovation, and
             exceptional customer service. Let us help you find not just a
@@ -41,7 +41,7 @@ const BlogsSection = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-4 gap-6 mt-16">
+        <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-6 mt-16">
           {blogs?.map((blog, index) => (
             <BlogCard
               key={index}
