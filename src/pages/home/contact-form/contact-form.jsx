@@ -91,7 +91,7 @@ const ContactFormSection = () => {
           </h2>
           <p
             ref={(el) => leftElementsRef.current.push(el)}
-            className="mt-4 text-black/60 lg:text-base text-sm"
+            className="mt-4 text-black/60 lg:text-base text-sm max-w-[90%]"
           >
             We are available Monday to Friday from 9:00 AM to 6:00 PM and on
             Saturdays from 10:00 AM to 4:00 PM. For urgent inquiries, you can

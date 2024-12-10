@@ -87,11 +87,11 @@ const FaqsSection = () => {
       </Accordion>
       <img
         src={green1}
-        className="select-none h-full absolute top-1/2 -translate-y-1/2 bottom-0 left-0 z-0 opacity-30"
+        className="select-none h-full absolute top-1/2 -translate-y-1/2 bottom-0 left-0 z-0 opacity-30 lg:block hidden"
       />
       <img
         src={blue1}
-        className="select-none h-full absolute top-1/2 -translate-y-1/2 bottom-0 -right-40 z-0 opacity-30"
+        className="select-none h-full absolute top-1/2 -translate-y-1/2 bottom-0 -right-40 z-0 opacity-30 lg:block hidden"
       />
     </div>
   );

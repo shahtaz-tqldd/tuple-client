@@ -8,6 +8,8 @@ import ErrorPage from "./pages/common/errorPage";
 import LoginPage from "./pages/auth/login";
 import RegisterPage from "./pages/auth/register";
 import Homepage from "./pages/home";
+import PropertiesPage from "./pages/properties";
+import PropertyDetailsPage from "./pages/properties/property-details";
 
 export const routes = createBrowserRouter([
   {
@@ -17,6 +19,14 @@ export const routes = createBrowserRouter([
       {
         path: "/",
         element: <Homepage />,
+      },
+      {
+        path: "/properties",
+        element: <PropertiesPage />,
+      },
+      {
+        path: "/properties/:name",
+        element: <PropertyDetailsPage />,
       },
     ],
   },

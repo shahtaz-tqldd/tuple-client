@@ -1,13 +1,15 @@
 import React, { forwardRef } from "react";
 import { Bath, Bed, SquareDashed } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const PropertyCard = forwardRef(({ property, refCallback }, ref) => {
   return (
-    <div
+    <Link
       ref={(el) => {
         refCallback(el);
         if (ref) ref.current = el;
       }}
+      to={`/properties/${property?.name?.toLowerCase().split(" ").join("-")}`}
       className="group rounded-3xl overflow-hidden shadow-[0_35px_60px_-5px_rgba(0,102,85,0.1)] hover:shadow-[0_50px_60px_-15px_rgba(0,102,85,0.13)]"
     >
       <div className="h-60 overflow-hidden">
@@ -41,7 +43,7 @@ const PropertyCard = forwardRef(({ property, refCallback }, ref) => {
           </div>
         </div>
       </div>
-    </div>
+    </Link>
   );
 });
 

@@ -56,12 +56,12 @@ const AboutUsSection = () => {
       <img
         src={blue1}
         alt=""
-        className="absolute -top-40 -right-[500px] z-0 opacity-30"
+        className="absolute -top-40 -right-[500px] z-0 opacity-30 lg:block hidden"
       />
       <img
         src={yellow1}
         alt=""
-        className="absolute -top-40 -left-[500px] z-0 opacity-40"
+        className="absolute -top-40 -left-[500px] z-0 opacity-40 lg:block hidden"
       />
       <div className="relative z-10">
         <h4 className="text-center tracking-[2px] text-black/40 uppercase">

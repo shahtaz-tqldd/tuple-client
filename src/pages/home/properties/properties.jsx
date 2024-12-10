@@ -3,6 +3,7 @@ import { properties } from "./data";
 import PropertyCard from "@/pages/properties/property-card";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { Link } from "react-router-dom";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -52,6 +53,7 @@ const PropertiesSection = () => {
           ))}
         </div>
       </div>
+      <Link to='/properties' className="py-4 px-7 rounded-full hover:bg-black tr center w-fit mx-auto mt-20 bg-primary text-white">Explore More Properties</Link>
     </section>
   );
 };

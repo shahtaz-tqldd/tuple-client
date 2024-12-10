@@ -1,9 +1,14 @@
-import React from 'react'
+import React from "react";
+import PropertiesHero from "./property-details/hero/hero";
+import PropertyList from "./property-list/property-list";
 
-const ProeprtiesPage = () => {
+const PropertiesPage = () => {
   return (
-    <div>ProeprtiesPage</div>
-  )
-}
+    <>
+      <PropertiesHero />
+      <PropertyList />
+    </>
+  );
+};
 
-export default ProeprtiesPage
+export default PropertiesPage;
