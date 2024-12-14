@@ -152,7 +152,7 @@ const ContactFormSection = () => {
                 ref={(el) => formElementsRef.current.push(el)}
               />
               <Button
-                className="rounded-lg h-[52px]"
+                className="rounded-full h-[56px]"
                 ref={(el) => formElementsRef.current.push(el)}
               >
                 Send Message

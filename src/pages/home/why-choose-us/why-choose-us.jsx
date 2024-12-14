@@ -100,7 +100,7 @@ const WhyChooseUsSection = () => {
         />
         <div className="lg:bg-gradient-to-l lg:bg-transparent bg-black/50 lg:from-black lg:to-transparent absolute h-full lg:w-[40%] w-full lg:right-[35%] right-0 z-[1]"></div>
       </div>
-      <div className="content flex lg:gap-20 relative z-10 items-center h-full py-12">
+      <div className="content min-h-screen flex lg:gap-20 relative z-10 items-center py-12">
         <div className="lg:flex-1"></div>
         <div className="lg:w-[55%] w-full">
           <h2 ref={headingRef} className="text-white/80 lg:text-5xl text-3xl">

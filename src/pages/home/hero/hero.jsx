@@ -129,7 +129,6 @@ const HeroSection = () => {
       "-=0.2"
     );
 
-    // Animate property details (beds, baths, area)
     tl.fromTo(
       propertyDetailsRefs.current,
       { opacity: 0, y: 20 },
@@ -144,14 +143,14 @@ const HeroSection = () => {
 
   return (
     <div
-      className="min-h-screen pt-20 relative z-10"
+      className="min-h-screen pt-20 relative z-10 center"
       style={{
         backgroundImage: `url(${HERO_IMAGE})`,
         backgroundSize: "cover",
         backgroundPosition: "top",
       }}
     >
-      <div className="content py-8">
+      <div className="content w-full">
         <div>
           <div className="lg:text-7xl md:text-4xl text-3xl max-w-[800px] lg:leading-[80px] text-black/60 font-medium">
             <h1 ref={(el) => (headingRefs.current[0] = el)}>Find the Most</h1>
@@ -167,7 +166,7 @@ const HeroSection = () => {
           </div>
         </div>
         <div className="mt-20 fl gap-2">
-          <Button ref={buttonRef} >
+          <Button ref={buttonRef}>
             Find Property
             <ChevronRight className="ml-1.5 mt-0.5 -mr-2 h-5 w-5" />
           </Button>
