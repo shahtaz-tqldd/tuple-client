@@ -12,14 +12,14 @@ export const navLinks = [
     link: "/properties",
   },
   {
-    id: 4,
-    title: "Agent",
-    link: "/agent",
-  },
-  {
     id: 5,
     title: "About",
     link: "/about",
+  },
+  {
+    id: 4,
+    title: "Blogs",
+    link: "/blogs",
   },
   {
     id: 6,

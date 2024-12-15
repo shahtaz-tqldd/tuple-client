@@ -103,7 +103,7 @@ export const VideoPlayer = ({ videoSrc }) => {
   };
 
   return (
-    <div className="relative w-full max-w-[800px] mx-auto rounded-3xl overflow-hidden mt-10">
+    <div className="relative w-full max-w-[880px] mx-auto rounded-3xl overflow-hidden mt-4">
       <video
         ref={videoRef}
         src={videoSrc}

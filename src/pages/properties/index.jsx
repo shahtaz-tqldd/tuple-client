@@ -1,5 +1,5 @@
 import React from "react";
-import PropertiesHero from "./property-details/hero/hero";
+import PropertiesHero from "./property-hero/property-hero";
 import PropertyList from "./property-list/property-list";
 
 const PropertiesPage = () => {

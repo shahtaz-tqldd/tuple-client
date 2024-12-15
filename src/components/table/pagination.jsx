@@ -37,7 +37,7 @@ const TablePaginate = ({
           <PaginationPrevious
             onClick={() => handlePageChange(currentPage - 1)}
             disabled={currentPage === 1}
-            className="cursor-pointer select-none"
+            className="cursor-pointer select-none text-primary"
           />
         </PaginationItem>
 
@@ -68,7 +68,7 @@ const TablePaginate = ({
           <PaginationNext
             onClick={() => handlePageChange(currentPage + 1)}
             disabled={currentPage === totalPages}
-            className="cursor-pointer select-none"
+            className="cursor-pointer select-none text-primary"
           />
         </PaginationItem>
       </PaginationContent>

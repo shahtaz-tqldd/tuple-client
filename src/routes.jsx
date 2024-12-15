@@ -10,6 +10,12 @@ import RegisterPage from "./pages/auth/register";
 import Homepage from "./pages/home";
 import PropertiesPage from "./pages/properties";
 import PropertyDetailsPage from "./pages/properties/property-details";
+import AgentPage from "./pages/agent";
+import AboutPage from "./pages/about";
+import ContactUsPage from "./pages/contact-us";
+import TermsAndConditionsPage from "./pages/common/termsPage";
+import PrivacyPolicyPage from "./pages/common/privacyPage";
+import BlogPage from "./pages/blogs";
 
 export const routes = createBrowserRouter([
   {
@@ -27,6 +33,30 @@ export const routes = createBrowserRouter([
       {
         path: "/properties/:name",
         element: <PropertyDetailsPage />,
+      },
+      {
+        path: "/blogs",
+        element: <BlogPage />,
+      },
+      {
+        path: "/agents",
+        element: <AgentPage />,
+      },
+      {
+        path: "/about",
+        element: <AboutPage />,
+      },
+      {
+        path: "/contact-us",
+        element: <ContactUsPage />,
+      },
+      {
+        path: "/terms-and-conditions",
+        element: <TermsAndConditionsPage />,
+      },
+      {
+        path: "/privacy-policy",
+        element: <PrivacyPolicyPage />,
       },
     ],
   },

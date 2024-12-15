@@ -1,9 +1,14 @@
-import React from 'react'
+import React from "react";
+import BlogHero from "./blog-hero/blog-hero";
+import BlogList from "./blog-list/blog-list";
 
 const BlogPage = () => {
   return (
-    <div>BlogPage</div>
-  )
-}
+    <>
+      <BlogHero />
+      <BlogList />
+    </>
+  );
+};
 
-export default BlogPage
+export default BlogPage;

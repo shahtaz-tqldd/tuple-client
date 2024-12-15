@@ -1,9 +1,6 @@
 import React from "react";
 import { RouterProvider } from "react-router-dom";
 import { Toaster } from "react-hot-toast";
-
-import AtomLoader from "./components/loader/AtomLoader";
-import useAuthCheck from "./hooks/useAuthCheck";
 import { routes } from "./routes";
 
 import "./assets/styles/global.css";
@@ -11,15 +8,7 @@ import "./assets/styles/typography.css";
 import "./assets/styles/layout.css";
 
 const App = () => {
-  const authChecked = useAuthCheck();
-  return !authChecked ? (
-    <section className="h-screen w-screen center dark:bg-black/90 bg-bg50">
-      <AtomLoader className="h-16 w-16" />
-      <h2 className="dark:text-white text-xl mt-4 uppercase tracking-[4px]">
-        Restro <span className="text-primary">Fx</span>
-      </h2>
-    </section>
-  ) : (
+  return (
     <React.Fragment>
       <RouterProvider router={routes} />
       <Toaster

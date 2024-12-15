@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import BlogCard from "@/pages/blogs/blog-card/blog-card";
-import { blogs } from "@/pages/blogs/data";
+import { blogs } from "@/pages/blogs/demo-data";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 

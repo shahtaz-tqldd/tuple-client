@@ -6,7 +6,7 @@ import WhyChooseUsSection from "./why-choose-us/why-choose-us";
 import BlogsSection from "./blogs/blogs";
 import FaqsSection from "./faqs/faqs";
 import ContactFormSection from "./contact-form/contact-form";
-import Testimonial from "./testimonial/testimonial";
+import Testimonial from "../about/testimonial/testimonial";
 
 const Homepage = () => {
   return (
