@@ -38,13 +38,13 @@ const Footer = () => {
           <div className="flex flex-col gap-2 lg:max-w-[220px] lg:w-full w-1/2 text-black/60">
             <h2 className="text-black/30 uppercase mb-4">Quick Links</h2>
             <Link
-              to="/terms-and-conditions"
+              to="/privacy-policy"
               className="text-sm text-nowrap hover:text-black tr w-fit"
             >
               Privacy Policy
             </Link>
             <Link
-              to="/privacy-policy"
+              to="/terms-and-conditions"
               className="text-sm text-nowrap hover:text-black tr w-fit"
             >
               Terms and Conditions

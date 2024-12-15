@@ -16,6 +16,7 @@ import ContactUsPage from "./pages/contact-us";
 import TermsAndConditionsPage from "./pages/common/termsPage";
 import PrivacyPolicyPage from "./pages/common/privacyPage";
 import BlogPage from "./pages/blogs";
+import BlogDetailsPage from "./pages/blogs/blog-details/blog-details";
 
 export const routes = createBrowserRouter([
   {
@@ -37,6 +38,10 @@ export const routes = createBrowserRouter([
       {
         path: "/blogs",
         element: <BlogPage />,
+      },
+      {
+        path: "/blogs/:name",
+        element: <BlogDetailsPage />,
       },
       {
         path: "/agents",

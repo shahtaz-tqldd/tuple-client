@@ -68,10 +68,21 @@
     /* @apply bg-background text-foreground; */
     font-family: "Inter", sans-serif;
     overflow-x: hidden;
-    
   }
 }
 
 .font-oxan {
   font-family: "Oxanium", sans-serif;
+}
+
+.blog_body p {
+  font-size: 16px;
+  font-weight: 400;
+  color: #666;
+  margin-bottom: 14px;
+}
+.blog_body h2 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #222;
 }

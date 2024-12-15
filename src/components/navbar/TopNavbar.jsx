@@ -13,7 +13,8 @@ const TopNavbar = () => {
   const actionButtonsRef = useRef([]);
 
   const isActive = (link) => {
-    return link === pathname;
+    if (link === "/") return link === pathname;
+    return pathname.includes(link);
   };
 
   const handleSearchShow = () => {
@@ -73,7 +74,9 @@ const TopNavbar = () => {
                 ref={(el) => (navLinksRef.current[index] = el)}
                 key={index}
                 to={link}
-                className="text-black/60"
+                className={`font-medium ${
+                  isActive(link) ? "text-black" : "text-black/60 "
+                }`}
               >
                 {title}
               </Link>

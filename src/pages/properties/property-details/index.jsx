@@ -11,7 +11,6 @@ import {
   Mail,
   MapPin,
   Phone,
-  Pin,
   Square,
   Star,
   User,
